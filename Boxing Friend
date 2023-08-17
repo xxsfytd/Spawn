@@ -1,0 +1,138 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("boxing Friends", "DarkTheme")
+
+local Tab = Window:NewTab("Bosses")
+local Section = Tab:NewSection("Choose one")
+Section:NewToggle("Boss 1", "PLATE", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Kill",
+    [2] = "Level 20"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+
+end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Kill",
+    [2] = "Level 20"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+
+end
+    end
+end)
+
+Section:NewToggle("Boss 2", "PLATE", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Kill",
+    [2] = "Level 15"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+
+end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Kill",
+    [2] = "Level 15"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NPC"):FireServer(unpack(args))
+
+end
+    end
+end)
+
+local Tab = Window:NewTab("Eggs")
+local Section = Tab:NewSection("Patient Eggs")
+Section:NewToggle("Final Egg", "Cost 50m Coins", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Desert",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
+      
+end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "Desert",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
+
+end
+    end
+end)
+
+Section:NewToggle("Huge Egg", "Only works if the free huge timer is finished", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "FreeHuge",
+    [2] = 1,
+    [3] = "{20cf5a7d-8ec3-4cdf-9de6-ff79c4f992e7}"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
+
+end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "FreeHuge",
+    [2] = 1,
+    [3] = "{20cf5a7d-8ec3-4cdf-9de6-ff79c4f992e7}"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
+
+end
+    end
+end)
+
+local Tab = Window:NewTab("Grinding")
+local Section = Tab:NewSection("Grinding")
+Section:NewToggle("Auto Weight", "Fite", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "WeightTool"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Weight"):FireServer(unpack(args))
+
+end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {
+    [1] = "WeightTool"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Weight"):FireServer(unpack(args))
+
+end
+    end
+end)
